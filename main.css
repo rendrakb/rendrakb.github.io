@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  background-image: url('/assets/bg/bg.webp');
   display: flex;
   align-items: center;
   flex-direction: column;
