@@ -5,7 +5,7 @@ body {
   align-items: center;
   flex-direction: column;
   color: white;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Roboto Mono", monospace;
 }
 
 a {
@@ -22,6 +22,8 @@ a {
 }
 
 .header {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
   text-align: center;
   font-size: 5em;
   margin-top: 20px;
