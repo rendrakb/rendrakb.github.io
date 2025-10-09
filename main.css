@@ -29,50 +29,76 @@ a {
 }
 
 .header:hover {
-  animation-play-state: paused;
+  animation: blurAnimation 1s infinite, scale 0.25s infinite;
 }
 
 @keyframes blurAnimation {
   0% {
     filter: blur(0px);
-    text-shadow: 0 0 10px white;
+    text-shadow: 0 0 5px white;
   }
   50% {
-    filter: blur(3px);
-    text-shadow: 0 0 0px white;
-
+    filter: blur(5px);
+    text-shadow: 0 0 1px black;
   }
   100% {
     filter: blur(0px);
-    text-shadow: 0 0 10px white;
+    text-shadow: 0 0 5px white;
   }
 }
 
 @keyframes shake {
-  0% { transform: translate(0px, 0px); }
-  25% { transform: translate(1px, -1px); }
-  50% { transform: translate(-1px, 1px); }
-  75% { transform: translate(1px, 1px); }
-  100% { transform: translate(-1px, -1px); }
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(1px, -1px);
+  }
+  50% {
+    transform: translate(-1px, 1px);
+  }
+  75% {
+    transform: translate(1px, 1px);
+  }
+  100% {
+    transform: translate(-1px, -1px);
+  }
 }
 
-.link-list {
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1.02);
+  }
+  66% {
+    transform: scale(0.98);
+  }
+}
+
+.link-container {
+  display: flex;
+  justify-content: center;
+}
+
+.link-div {
   text-align: center;
   margin-top: 30px;
-  word-spacing: 15px;
-  width: 80vw;
+  margin-left: 8px;
+  margin-right: 8px;
   font-size: 1em;
 }
 
-.link-nav {
-    filter: blur(1px);
-}
-
-.link-list a:hover {
+.link-div a:hover {
   filter: blur(0px);
 }
 
-.link-nav-active {
+.link-url {
+  filter: blur(1px);
+}
+
+.link-url-active {
   filter: blur(0px);
 }
 
@@ -81,13 +107,13 @@ a {
   font-size: 0.8em;
   width: 80vw;
   align-items: center;
-  text-align: center;;
+  text-align: center;
 }
 
 .ascii-container {
   margin-top: 30px;
   align-items: center;
-  text-align: center;;
+  text-align: center;
 }
 
 .title {
@@ -97,6 +123,6 @@ a {
 #output {
   font-size: 0.4rem;
   align-items: center;
-  background:transparent;
+  background: transparent;
   overflow: hidden;
 }
