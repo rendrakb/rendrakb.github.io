@@ -25,11 +25,11 @@ a {
   text-align: center;
   font-size: 5em;
   margin-top: 20px;
-  animation: blurAnimation 1s infinite, shake 0.1s infinite;
+  animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
 }
 
 .header:hover {
-  animation: blurAnimation 1s infinite, scale 0.25s infinite;
+  animation: blurAnimation 1s infinite, scaleAnimation 0.25s infinite;
 }
 
 @keyframes blurAnimation {
@@ -37,17 +37,21 @@ a {
     filter: blur(0px);
     text-shadow: 0 0 5px white;
   }
-  50% {
-    filter: blur(5px);
+  25% {
+    filter: blur(3px);
     text-shadow: 0 0 1px black;
   }
-  100% {
+  50% {
+    filter: blur(0px);
+    text-shadow: 0 0 5px white;
+  }
+  75% {
     filter: blur(0px);
     text-shadow: 0 0 5px white;
   }
 }
 
-@keyframes shake {
+@keyframes shakeAnimation {
   0% {
     transform: translate(0px, 0px);
   }
@@ -65,7 +69,7 @@ a {
   }
 }
 
-@keyframes scale {
+@keyframes scaleAnimation {
   0% {
     transform: scale(1);
   }
