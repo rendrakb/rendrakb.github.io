@@ -89,7 +89,10 @@ async function play() {
   }
   play();
 }
-play();
+
+window.onload = function () {
+  play();
+};
 
 function setColour(hexString) {
   colour = hexString;
