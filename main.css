@@ -1,10 +1,11 @@
 body {
   background-color: black;
-  background-image: url('/assets/bg/bg.webp');
+  background-image: url("/assets/bg/bg.webp");
   display: flex;
   align-items: center;
   flex-direction: column;
   color: white;
+  font-family: "Helvetica", monospace;
 }
 
 a {
@@ -15,19 +16,58 @@ a {
 
 .header {
   text-align: left;
+  font-size: 5em;
   margin-top: 20px;
   width: 75vw;
+  animation: blurAnimation 0.5s infinite, shake 0.1s infinite;
+}
+
+.header:hover {
+  animation-play-state: paused;
+}
+
+@keyframes blurAnimation {
+  0% {
+    filter: blur(0px);
+  }
+  50% {
+    filter: blur(3px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+@keyframes shake {
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(2px, -2px); }
+  50% { transform: translate(-2px, 2px); }
+  75% { transform: translate(2px, 2px); }
+  100% { transform: translate(-2px, -2px); }
 }
 
 .link-list {
   text-align: left;
-  margin-top: 20px;
+  margin-top: 30px;
   word-spacing: 20px;
   width: 75vw;
+  font-size: 1em;
+}
+
+.link-nav {
+    filter: blur(1px);
+}
+
+.link-list a:hover {
+  filter: blur(0px);
 }
 
 .content-container {
-  display: flex;
-  margin-top: 20px;
+  margin-top: 30px;
   width: 75vw;
+  font-size: 0.8em;
+}
+
+.title {
+  margin-top: 30px;
 }
