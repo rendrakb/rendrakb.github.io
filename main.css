@@ -15,10 +15,9 @@ a {
 }
 
 .header {
-  text-align: left;
+  text-align: center;
   font-size: 5em;
   margin-top: 20px;
-  width: 75vw;
   animation: blurAnimation 0.5s infinite, shake 0.1s infinite;
 }
 
@@ -47,10 +46,10 @@ a {
 }
 
 .link-list {
-  text-align: left;
+  text-align: center;
   margin-top: 30px;
   word-spacing: 20px;
-  width: 75vw;
+  width: 80vw;
   font-size: 1em;
 }
 
@@ -64,10 +63,26 @@ a {
 
 .content-container {
   margin-top: 30px;
-  width: 75vw;
   font-size: 0.8em;
+  width: 80vw;
+  align-items: center;
+  text-align: center;;
 }
+
+.ascii-container {
+  margin-top: 30px;
+  font-size: 0.8em;
+  align-items: center;
+  text-align: center;;
+}
+
 
 .title {
   margin-top: 30px;
+}
+
+#output {
+  font-size: 0.4rem;
+  align-items: center;
+  background:transparent;
 }
