@@ -114,6 +114,14 @@ a {
   text-align: center;
 }
 
+.about-container {
+  margin-top: 30px;
+  font-size: 0.8em;
+  width: 80vw;
+  align-items: center;
+  text-align: center;
+}
+
 .ascii-container {
   margin-top: 30px;
   align-items: center;
@@ -124,8 +132,15 @@ a {
   margin-top: 30px;
 }
 
-#output {
+#output-home {
   font-size: 0.4rem;
+  align-items: center;
+  background: transparent;
+  overflow: hidden;
+}
+
+#output-port {
+  font-size: 0.5rem;
   align-items: center;
   background: transparent;
   overflow: hidden;

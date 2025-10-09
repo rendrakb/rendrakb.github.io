@@ -83,7 +83,7 @@ n[38] =
 async function play() {
   var frames = n.length;
   for (var i = 0; i < frames; i++) {
-    document.getElementById("output").innerHTML =
+    document.getElementById("output-home").innerHTML =
       '<font color="' + colour + '"><pre>' + n[i] + "</font></pre>";
     await new Promise((r) => setTimeout(r, 50));
   }
