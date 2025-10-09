@@ -1,9 +1,17 @@
 [
-    {
-        "id": "blog-001",
-        "title": "Site Update: Launched",
-        "tags": "site",
-        "date": "2025-10-10",
-        "content": "This site is now live. Fully functional statically. More contents coming."
-    }
+  {
+    "id": "blog-002",
+    "title": "Site: Project Contents",
+    "tags": "update",
+    "date": "2025-10-10",
+    "content": "The contents for the project pages are not ready yet.<br>Will work on that after the end of December.<br>Kinda overwhelmed with deadlines until then."
+  },
+
+  {
+    "id": "blog-001",
+    "title": "Site: Launched",
+    "tags": "update",
+    "date": "2025-10-09",
+    "content": "This site is now live.<br>Fully functional statically.<br>More contents coming."
+  }
 ]
