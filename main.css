@@ -22,8 +22,10 @@ a {
 .footer {
   font-size: 0.5rem;
   position: fixed;
-  top: 0px;
-  right: 0px;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
 }
 
 .header {
@@ -62,7 +64,7 @@ a {
     text-shadow: 0 0 5px white;
   }
   25% {
-    filter: blur(3px);
+    filter: blur(4px);
     text-shadow: 0 0 1px black;
   }
   50% {
@@ -185,13 +187,8 @@ a {
   width: 500px;
 }
 
-#blog-post {
-  cursor: pointer;
-}
-
 .blog-title:hover {
   color: #636363;
-  font-size: 1.7em;
 }
 
 .blog-content {
@@ -240,4 +237,49 @@ a {
   justify-content: center;
   width: 80vw;
   max-width: 500px;
+}
+
+.copy-btn {
+  background: none;
+  border: #636363 solid 1px;
+  color: white;
+  font-size: 1em;
+  font-family: "Roboto Mono", monospace;
+  padding: 7px;
+  height: 30px;
+  filter: blur(1px);
+}
+
+.copy-btn:hover {
+  background-color: white;
+  border: #636363 solid 1px;
+  color: black;
+  filter: blur(0px);
+}
+
+#copy-btn-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.copy-alert {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  padding: 10px 16px;
+  border-radius: 3px;
+  font-size: 1em;
+  z-index: 100;
+  opacity: 0;
+  filter: blur(1px);
+}
+
+.copy-alert.show {
+  display: block;
+  opacity: 0.9;
 }

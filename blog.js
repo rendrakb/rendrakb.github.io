@@ -27,6 +27,9 @@ function renderArchive(filteredTag = null) {
             <div class="blog-content" style="display:none;">
               <p>${blog.content}</p>
               <p>#${blog.tags}</p>
+              <div id="copy-btn-container">
+                <button class="copy-btn" onclick="copyLink('${blog.id}')">Copy link</button>
+              </div>
             </div>
           </div>
           <hr class="divider">
@@ -71,5 +74,29 @@ function addCollapseListeners() {
       content.style.display =
         content.style.display === "none" ? "block" : "none";
     });
+  });
+}
+
+window.addEventListener("load", () => {
+  const hash = window.location.hash;
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target) {
+      const content = target.querySelector(".blog-content");
+      if (content) content.style.display = "block";
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+});
+
+function copyLink(blogId) {
+  const url = `${window.location.origin}${window.location.pathname}#${blogId}`;
+  navigator.clipboard.writeText(url).then(() => {
+    const alert = document.getElementById("copy-notification");
+    alert.classList.add("show");
+
+    setTimeout(() => {
+      alert.classList.remove("show");
+    }, 2000);
   });
 }
