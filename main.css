@@ -3,6 +3,7 @@ body {
   background-image: url("/assets/bg/bg.webp");
   color: white;
   font-family: "Roboto Mono", monospace;
+  align-items: center;
 }
 
 #main-container {
@@ -21,9 +22,7 @@ a {
 .footer {
   font-size: 0.5rem;
   position: fixed;
-  bottom: 5px;
-  right: 50vw;
-  text-align: center;
+  bottom: 0px;
 }
 
 .header {
@@ -155,6 +154,8 @@ a {
   align-items: center;
   text-align: center;
   overflow: hidden;
+  position: fixed;
+  top: 25%;
 }
 
 .title {
