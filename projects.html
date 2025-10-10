@@ -10,38 +10,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <a href="https://rendrakb.github.io">RK</a>
-    </header>
-    <div class="link-container">
-        <div class="link-div">
-            <a class="link-url" href="https://rendrakb.github.io">Home<a>
+    <div class="header">
+        <a id="header-left">R</a>
+        <a id="header-right">K</a>
+    </div>
+    <div id="main-container">
+        <div class="link-container">
+            <div class="link-div">
+                <a class="link-url" href="https://rendrakb.github.io">Home<a>
+            </div>
+            <div class="link-div">
+                <a class="link-url-active" href="projects.html">Projects</a>
+            </div>
+            <div class="link-div">
+                <a class="link-url" href="blog.html">Blog</a>
+            </div>
+            <div class="link-div">
+                <a class="link-url" href="about.html">About</a>
+            </div>
         </div>
-        <div class="link-div">
-            <a class="link-url-active" href="projects.html">Projects</a>
+        <div class="link-container">
+            <div class="link-div">
+                <a class="link-url" href="arch.html">Arch</a>
+            </div>
+            <div class="link-div">
+                <a class="link-url" href="design.html">Design</a>
+            </div>
+            <div class="link-div">
+                <a class="link-url" href="misc.html">Misc</a>
+            </div>
         </div>
-        <div class="link-div">
-            <a class="link-url" href="blog.html">Blog</a>
-        </div>
-        <div class="link-div">
-            <a class="link-url" href="about.html">About</a>
+        <div class="ascii-container">
+            <div id="output-port"></div>
+            <script src="ascii-port.js"></script>
         </div>
     </div>
-    <div class="link-container">
-        <div class="link-div">
-            <a class="link-url" href="arch.html">Arch</a>
-        </div>
-        <div class="link-div">
-            <a class="link-url" href="design.html">Design</a>
-        </div>
-        <div class="link-div">
-            <a class="link-url" href="misc.html">Misc</a>
-        </div>
-    </div>
-    <section class="ascii-container">
-        <div id="output-port"></div>
-        <script src="ascii-port.js"></script>
-    </section>
     <footer class="footer">
         <p>RendraKB©2025</p>
     </footer>
