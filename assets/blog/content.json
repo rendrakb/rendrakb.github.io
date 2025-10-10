@@ -1,17 +1,26 @@
 [
+
+  {
+    "id": "blog-003",
+    "title": "Thought: Test",
+    "tags": "thought",
+    "date": "2025-10-11",
+    "content": "This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test.This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test.This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test.This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test.This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test.This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. "
+  },
+
   {
     "id": "blog-002",
     "title": "Site: Project Contents",
-    "tags": "update",
+    "tags": "site",
     "date": "2025-10-10",
-    "content": "The contents for the project pages are not ready yet.<br>Will work on that after the end of December.<br>Kinda overwhelmed with deadlines until then."
+    "content": "The contents for the project pages are not ready yet. Will work on that after the end of December. Kinda overwhelmed with deadlines until then."
   },
 
   {
     "id": "blog-001",
     "title": "Site: Launched",
-    "tags": "update",
+    "tags": "site",
     "date": "2025-10-09",
-    "content": "This site is now live.<br>Fully functional statically.<br>More contents coming."
+    "content": "This site is now live. Fully functional statically. More contents coming."
   }
 ]

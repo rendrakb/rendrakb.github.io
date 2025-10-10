@@ -98,6 +98,7 @@ a {
 
 .link-div a:hover {
   filter: blur(0px);
+  font-size: 1.1em;
 }
 
 .link-url {
@@ -106,6 +107,7 @@ a {
 
 .link-url-active {
   filter: blur(0px);
+  font-size: 1.1em;
 }
 
 .content-container {
@@ -119,7 +121,8 @@ a {
 .about-container {
   margin-top: 30px;
   font-size: 0.8em;
-  width: 80vw;
+  max-width: 80vw;
+  width: 500px;
   align-items: center;
   text-align: center;
 }
@@ -136,7 +139,7 @@ a {
 }
 
 #output-home {
-  font-size: 0.4rem;
+  font-size: 0.35rem;
   align-items: center;
   background: transparent;
   overflow: hidden;
@@ -151,17 +154,64 @@ a {
 
 #blog-container {
   margin-top: 30px;
-  font-size: 0.8em;
+  font-size: 0.7em;
   align-items: center;
   max-width: 80vw;
+  width: 500px;
 }
 
 #blog-post {
-  text-align: left;
+  cursor: pointer;
+}
+
+.blog-title:hover {
+  color: #636363;
+  font-size: 1.7em;
+}
+
+.blog-content {
+  margin-top: 30px;
 }
 
 .divider {
   border: 1px solid #636363;
   margin-top: 30px;
-  width: 50vw;
+}
+
+.topic-btn {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  filter: blur(1px);
+}
+
+.topic-btn:hover {
+  filter: blur(0px);
+  font-size: 1.1em;
+}
+
+.topic-btn-active {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+  font-size: 1.1em;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.topics-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  width: 80vw;
+  max-width: 500px;
 }
