@@ -100,10 +100,10 @@ a {
     transform: scale(1);
   }
   33% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   66% {
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
 }
 
@@ -153,16 +153,11 @@ a {
 }
 
 .ascii-container {
-  margin-top: 30px;
   align-items: center;
   text-align: center;
   overflow: hidden;
   position: fixed;
   top: 20%;
-}
-
-.title {
-  margin-top: 30px;
 }
 
 #output-home {
@@ -198,6 +193,7 @@ a {
 .divider {
   border: 1px solid #636363;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .topic-btn {
@@ -282,4 +278,24 @@ a {
 .copy-alert.show {
   display: block;
   opacity: 0.9;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+#project-tbd {
+  align-items: center;
+  font-family: 'Courier New', monospace;
+  font-size: 5em;
+  text-align: center;
+  overflow: hidden;
+  position: fixed;
+  top: 40%;
+  animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
+}
+
+#project-tbd:hover {
+    animation: blurAnimation 1s infinite, scaleAnimation 0.5s infinite;
 }

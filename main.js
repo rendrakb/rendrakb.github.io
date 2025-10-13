@@ -63,11 +63,25 @@ function highlightActiveLink() {
   const currentPath = window.location.pathname;
   const links = document.querySelectorAll(".link-url");
 
+  const projectPages = [
+    "/projects.html",
+    "/arch.html",
+    "/design.html",
+    "/misc.html",
+  ];
+
   links.forEach((link) => {
     const linkPath = new URL(link.href).pathname;
+
     if (
       linkPath === currentPath ||
       (linkPath === "/" && currentPath === "/index.html")
+    ) {
+      link.classList.remove("link-url");
+      link.classList.add("link-url-active");
+    } else if (
+      linkPath === "/projects.html" &&
+      projectPages.includes(currentPath)
     ) {
       link.classList.remove("link-url");
       link.classList.add("link-url-active");
