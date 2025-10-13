@@ -1,1 +1,1 @@
-Personal blog & works showcase.
+Personal blog & works archive.
