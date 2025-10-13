@@ -30,23 +30,42 @@ a {
 
 .header {
   width: 100vw;
-  font-family: "Roboto Mono", monospace;
-  font-weight: 700;
-  font-size: 7em;
   z-index: 1;
+}
+
+#x-left {
+  position: fixed;
+  width: 9vw;
+  max-width: 50px;
+  top: 0%;
+  left: 0%;
+  animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
+}
+
+#x-right {
+  position: fixed;
+  width: 9vw;
+  max-width: 50px;
+  top: 0%;
+  right: 0%;
+  animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
 }
 
 #header-left {
   position: fixed;
-  bottom: -30px;
-  left: -17px;
+  width: 9.5vw;
+  max-width: 75px;
+  bottom: 0%;
+  left: 0%;
   animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
 }
 
 #header-right {
   position: fixed;
-  bottom: -30px;
-  right: -10px;
+  width: 10vw;
+  max-width: 75px;
+  bottom: 0%;
+  right: 0%;
   animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
 }
 
@@ -109,6 +128,7 @@ a {
 
 .link-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -176,7 +196,7 @@ a {
 
 #blog-container {
   margin-top: 30px;
-  font-size: 0.7em;
+  font-size: 0.8em;
   align-items: center;
   max-width: 80vw;
   width: 500px;
@@ -229,6 +249,7 @@ a {
 .topics-container {
   margin-top: 20px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   width: 80vw;
