@@ -157,7 +157,6 @@ a {
 
 .content-container {
   margin-top: 30px;
-  font-size: 0.8em;
   width: 80vw;
   align-items: center;
   text-align: center;
@@ -165,7 +164,8 @@ a {
 
 .about-container {
   margin-top: 30px;
-  font-size: 0.8em;
+  font-size: 1em;
+  line-height: 2em;
   max-width: 80vw;
   width: 500px;
   align-items: center;
@@ -181,14 +181,14 @@ a {
 }
 
 #output-home {
-  font-size: 0.5rem;
+  font-size: 0.9em;
   align-items: center;
   background: transparent;
   overflow: hidden;
 }
 
 #output-port {
-  font-size: 0.7rem;
+  font-size: 1em;
   align-items: center;
   background: transparent;
   overflow: hidden;
@@ -196,7 +196,8 @@ a {
 
 #blog-container {
   margin-top: 30px;
-  font-size: 0.8em;
+  font-size: 0.9em;
+  line-height: 2em;
   align-items: center;
   max-width: 80vw;
   width: 500px;
