@@ -251,7 +251,7 @@ async function play(startFrame = 0) {
   for (let i = startFrame; i < frames; i++) {
     document.getElementById("output-port").innerHTML =
       '<font color="' + colour + '"><pre>' + n[i] + "</font></pre>";
-    await new Promise((r) => setTimeout(r, 100));
+    await new Promise((r) => setTimeout(r, 50));
   }
 
   hasStarted = true;
