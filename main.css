@@ -33,29 +33,11 @@ a {
   z-index: 1;
 }
 
-#x-left {
-  position: fixed;
-  width: 9vw;
-  max-width: 50px;
-  top: 0%;
-  left: 0%;
-  animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
-}
-
-#x-right {
-  position: fixed;
-  width: 9vw;
-  max-width: 50px;
-  top: 0%;
-  right: 0%;
-  animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
-}
-
 #header-left {
   position: fixed;
   width: 9.5vw;
   max-width: 75px;
-  bottom: 0%;
+  bottom: 5%;
   left: 0%;
   animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
 }
@@ -64,7 +46,7 @@ a {
   position: fixed;
   width: 10vw;
   max-width: 75px;
-  bottom: 0%;
+  bottom: 5%;
   right: 0%;
   animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
 }
@@ -308,14 +290,20 @@ a {
   font-size: 1.3em;
 }
 
+#x-tbd {
+  width: 9.5vw;
+  max-width: 75px;
+  animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
+}
+
 #project-tbd {
   align-items: center;
   font-family: 'Courier New', monospace;
-  font-size: 5em;
+  font-size: 2em;
   text-align: center;
   overflow: hidden;
   position: fixed;
-  top: 40%;
+  top: 30%;
   animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
 }
 
