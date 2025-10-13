@@ -252,6 +252,7 @@ a {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  text-align: center;
   width: 80vw;
   max-width: 500px;
 }
