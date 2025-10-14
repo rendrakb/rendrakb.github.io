@@ -120,12 +120,12 @@ a {
   margin-top: 30px;
   margin-left: 8px;
   margin-right: 8px;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .link-div a:hover {
   filter: blur(0px);
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 
 .link-url {
@@ -134,7 +134,7 @@ a {
 
 .link-url-active {
   filter: blur(0px);
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 
 .content-container {
@@ -146,8 +146,8 @@ a {
 
 .about-container {
   margin-top: 30px;
-  font-size: 1em;
-  line-height: 2em;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
   max-width: 80vw;
   width: 500px;
   align-items: center;
@@ -163,14 +163,14 @@ a {
 }
 
 #output-home {
-  font-size: 0.9em;
+  font-size: 0.7rem;
   align-items: center;
   background: transparent;
   overflow: hidden;
 }
 
 #output-port {
-  font-size: 1em;
+  font-size: 0.8rem;
   align-items: center;
   background: transparent;
   overflow: hidden;
@@ -178,16 +178,19 @@ a {
 
 #blog-container {
   margin-top: 30px;
-  font-size: 0.9em;
-  line-height: 2em;
+  font-size: 0.9rem;
+  line-height: 1.8rem;
   align-items: center;
   max-width: 80vw;
   width: 500px;
 }
 
-.blog-title:hover {
-  color: #636363;
+.blog-title {
+  filter: blur(1px)
 }
+
+.blog-title:hover {
+  filter: blur(0px);}
 
 .blog-content {
   margin-top: 10px;
@@ -202,7 +205,7 @@ a {
 .topic-btn {
   font-family: "Roboto Mono", monospace;
   font-weight: 700;
-  font-size: 1em;
+  font-size: 1rem;
   padding: 5px;
   background-color: transparent;
   border: none;
@@ -214,13 +217,13 @@ a {
 
 .topic-btn:hover {
   filter: blur(0px);
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 
 .topic-btn-active {
   font-family: "Roboto Mono", monospace;
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 1.1rem;
   padding: 5px;
   background-color: transparent;
   border: none;
@@ -244,9 +247,12 @@ a {
   background: none;
   border: #636363 solid 1px;
   color: white;
-  font-size: 1em;
+  font-size: 0.8rem;
   font-family: "Roboto Mono", monospace;
-  padding: 7px;
+  text-align: center;
+  justify-content: center;
+  padding-right: 5px;
+  padding-left: 5px;
   height: 30px;
   filter: blur(1px);
 }
@@ -274,7 +280,7 @@ a {
   color: black;
   padding: 10px 16px;
   border-radius: 3px;
-  font-size: 1em;
+  font-size: 1rem;
   z-index: 100;
   opacity: 0;
   filter: blur(1px);
@@ -282,12 +288,12 @@ a {
 
 .copy-alert.show {
   display: block;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .title {
   font-weight: 700;
-  font-size: 1.3em;
+  font-size: 1rem;
 }
 
 #x-tbd {
@@ -299,7 +305,7 @@ a {
 #project-tbd {
   align-items: center;
   font-family: 'Courier New', monospace;
-  font-size: 2em;
+  font-size: 2rem;
   text-align: center;
   overflow: hidden;
   position: fixed;
