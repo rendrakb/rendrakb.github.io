@@ -36,18 +36,18 @@ a {
 #header-left {
   position: fixed;
   width: 9.5vw;
-  max-width: 75px;
-  bottom: 5%;
-  left: 0%;
+  max-width: 40px;
+  bottom: 1%;
+  left: 1%;
   animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
 }
 
 #header-right {
   position: fixed;
   width: 10vw;
-  max-width: 75px;
-  bottom: 5%;
-  right: 0%;
+  max-width: 40px;
+  bottom: 1%;
+  right: 1%;
   animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
 }
 
