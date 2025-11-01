@@ -298,19 +298,21 @@ a {
 }
 
 #x-tbd {
-  width: 9.5vw;
-  max-width: 75px;
+  width: 25vw;
+  max-width: 10px;
   animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
 }
 
 #project-tbd {
   align-items: center;
   font-family: 'Courier New', monospace;
+  display: flex;
   font-size: 2rem;
   text-align: center;
   overflow: hidden;
   position: fixed;
   top: 30%;
+  gap: 10px;
   animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
 }
 
