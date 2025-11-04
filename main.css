@@ -33,11 +33,18 @@ a {
   z-index: 1;
 }
 
+.header-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
 #header-left {
   position: fixed;
   width: 9.5vw;
-  max-width: 40px;
-  bottom: 1%;
+  max-width: 20px;
+  bottom: 40%;
   left: 1%;
   animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
 }
@@ -45,8 +52,8 @@ a {
 #header-right {
   position: fixed;
   width: 10vw;
-  max-width: 40px;
-  bottom: 1%;
+  max-width: 20px;
+  bottom: 40%;
   right: 1%;
   animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
 }

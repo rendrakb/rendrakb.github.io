@@ -88,3 +88,21 @@ function highlightActiveLink() {
     }
   });
 }
+
+function navigateHeader(direction) {
+  const headerNav = {
+    "/": { left: "/about.html", right: "/projects.html" },
+    "/index.html": { left: "/about.html", right: "/projects.html" },
+    "/projects.html": { left: "/", right: "/blog.html" },
+    "/blog.html": { left: "/projects.html", right: "/about.html" },
+    "/about.html": { left: "/blog.html", right: "/" },
+    "/arch.html": { left: "/misc.html", right: "/design.html" },
+    "/design.html": { left: "/arch.html", right: "/misc.html" },
+    "/misc.html": { left: "/design.html", right: "/arch.html" },
+  };
+
+  const currentPath = window.location.pathname;
+  const nav = headerNav[currentPath] || headerNav["/"];
+
+  window.location.href = nav[direction];
+}
