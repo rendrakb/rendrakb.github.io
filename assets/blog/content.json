@@ -1,5 +1,12 @@
 [
   {
+    "id": "blog-008",
+    "title": "Quote: Time",
+    "tags": "quote",
+    "date": "2025-11-10",
+    "content": "'To create a little flower is the labour of ages.'"},
+  
+  {
     "id": "blog-007",
     "title": "Story: Softy the Slug & Crabby the Crab",
     "tags": "story",
