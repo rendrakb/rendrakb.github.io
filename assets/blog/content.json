@@ -1,11 +1,19 @@
-[
+[ {
+    "id": "blog-009",
+    "title": "Quote: Propaganda",
+    "tags": "Quote",
+    "date": "2025-12-01",
+    "content": "“For action makes propaganda's effect irreversible. He who acts in obedience to propaganda can never go back. He is now obliged to believe in that propaganda because of his past action. He is obliged to receive from it his justification and authority, without which his action will seem to him absurd or unjust, which would be intolerable. He is obliged to continue to advance in the direction indicated by propaganda, for action demands more action. He is what one calls committed - which is certainly what the Communist party anticipates, for example, and what the Nazis accomplished. The man who has acted in accordance with the existing propaganda has taken his place in society. From then on he has enemies. Often he has broken with his milieu or his family; he may be compromised. He is forced to accept the new milieu and the new friends that propaganda makes for him. Often he has committed an act reprehensible by traditional moral standards and has disturbed a certain order; he needs a justification for this - and he gets more deeply involved by repeating the act in order to prove that it was just. Thus he is caught up in a movement that develops until it totally occupies the breadth of his conscience. Propaganda now masters him completely — and we must bear in mind that any propaganda that does not lead to this kind of participation is mere child's play.”<hr>- Jacques Ellul, Propaganda: The Formation of Men's Attitudes"
+  },
+  
   {
     "id": "blog-008",
     "title": "Quote: Time",
     "tags": "quote",
     "date": "2025-11-10",
-    "content": "'To create a little flower is the labour of ages.'"},
-  
+    "content": "'To create a little flower is the labour of ages.'"
+  },
+
   {
     "id": "blog-007",
     "title": "Story: Softy the Slug & Crabby the Crab",
