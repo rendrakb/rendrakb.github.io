@@ -1,14 +1,27 @@
 let blogData = [];
 
-fetch("/assets/blog/content.json")
-  .then((response) => response.json())
-  .then((data) => {
-    blogData = data;
+function initBlog() {
+  const tagContainer = document.getElementById("topic-tags");
+  const blogContainer = document.getElementById("blog-container");
+  if (!tagContainer || !blogContainer) return;
+
+  if (blogData.length > 0) {
     renderTopics();
     renderArchive();
-  });
+    setTimeout(handleBlogHash, 300);
+  } else {
+    fetch("/assets/blog/content.json")
+      .then((response) => response.json())
+      .then((data) => {
+        blogData = data;
+        renderTopics();
+        renderArchive();
+        setTimeout(handleBlogHash, 300);
+      });
+  }
+}
 
-setTimeout(() => {
+function handleBlogHash() {
   const hash = window.location.hash;
   if (hash) {
     const target = document.querySelector(hash);
@@ -18,10 +31,11 @@ setTimeout(() => {
       target.scrollIntoView({ behavior: "smooth" });
     }
   }
-}, 500);
+}
 
 function renderArchive(filteredTag = null) {
   const container = document.getElementById("blog-container");
+  if (!container) return;
   container.innerHTML = "";
 
   let filteredData = blogData;
@@ -54,6 +68,7 @@ function renderArchive(filteredTag = null) {
 
 function renderTopics(activeTag = null) {
   const tagContainer = document.getElementById("topic-tags");
+  if (!tagContainer) return;
   tagContainer.innerHTML = "";
 
   const allBtn = document.createElement("button");
@@ -93,10 +108,10 @@ function copyLink(blogId) {
   const url = `${window.location.origin}${window.location.pathname}#${blogId}`;
   navigator.clipboard.writeText(url).then(() => {
     const alert = document.getElementById("copy-notification");
-    alert.classList.add("show");
+    if (alert) alert.classList.add("show");
 
     setTimeout(() => {
-      alert.classList.remove("show");
+      if (alert) alert.classList.remove("show");
     }, 2000);
   });
 }

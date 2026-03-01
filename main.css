@@ -1,15 +1,99 @@
+@keyframes move-background {
+  from {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-moz-keyframes move-background {
+  from {
+    -moz-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -moz-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.stars {
+  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 0;
+}
+
+.twinkling {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  -moz-animation: move-background 70s linear infinite;
+  -ms-animation: move-background 70s linear infinite;
+  -o-animation: move-background 70s linear infinite;
+  -webkit-animation: move-background 70s linear infinite;
+  animation: move-background 70s linear infinite;
+}
+
+.clouds {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  opacity: 0.25;
+  -moz-animation: move-background 150s linear infinite;
+  -ms-animation: move-background 150s linear infinite;
+  -o-animation: move-background 150s linear infinite;
+  -webkit-animation: move-background 150s linear infinite;
+  animation: move-background 150s linear infinite;
+}
+
 body {
   background-color: black;
-  background-image: url("/assets/bg/bg.webp");
   color: white;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   align-items: center;
+  font-size: 16px;
 }
 
 #main-container {
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 a {
@@ -19,16 +103,19 @@ a {
 }
 
 .footer {
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   position: fixed;
   bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
   background-color: black;
+  z-index: 10;
 }
 
 .header {
   width: 100vw;
+  position: relative;
+  z-index: 10;
 }
 
 .header-button {
@@ -45,7 +132,6 @@ a {
   max-width: 20px;
   bottom: 40%;
   left: 1%;
-  animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
 }
 
 #header-right {
@@ -54,52 +140,14 @@ a {
   max-width: 20px;
   bottom: 40%;
   right: 1%;
-  animation: blurAnimation 1s infinite, shakeAnimation 0.1s infinite;
 }
 
 #header-left:hover {
-  animation: blurAnimation 1s infinite, scaleAnimation 0.25s infinite;
+  animation: scaleAnimation 0.25s infinite;
 }
 
 #header-right:hover {
-  animation: blurAnimation 1s infinite, scaleAnimation 0.25s infinite;
-}
-
-@keyframes blurAnimation {
-  0% {
-    filter: blur(0px);
-    text-shadow: 0 0 5px white;
-  }
-  25% {
-    filter: blur(4px);
-    text-shadow: 0 0 1px black;
-  }
-  50% {
-    filter: blur(0px);
-    text-shadow: 0 0 5px white;
-  }
-  75% {
-    filter: blur(0px);
-    text-shadow: 0 0 5px white;
-  }
-}
-
-@keyframes shakeAnimation {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  25% {
-    transform: translate(1px, -1px);
-  }
-  50% {
-    transform: translate(-1px, 1px);
-  }
-  75% {
-    transform: translate(1px, 1px);
-  }
-  100% {
-    transform: translate(-1px, -1px);
-  }
+  animation: scaleAnimation 0.25s infinite;
 }
 
 @keyframes scaleAnimation {
@@ -126,12 +174,12 @@ a {
   margin-top: 30px;
   margin-left: 8px;
   margin-right: 8px;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .link-div a:hover {
   filter: blur(0px);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .link-url {
@@ -140,7 +188,7 @@ a {
 
 .link-url-active {
   filter: blur(0px);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .content-container {
@@ -152,43 +200,18 @@ a {
 
 .about-container {
   margin-top: 30px;
-  font-size: 0.9rem;
-  line-height: 1.8rem;
+  font-size: 0.9375rem;
+  line-height: 1.65rem;
   max-width: 80vw;
   width: 500px;
   align-items: center;
   text-align: center;
 }
 
-.ascii-container {
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  position: fixed;
-  top: 20%;
-  z-index: 1;
-}
-
-#output-home {
-  font-size: 0.7rem;
-  align-items: center;
-  background: transparent;
-  overflow: hidden;
-  z-index: 1;
-}
-
-#output-port {
-  font-size: 0.8rem;
-  align-items: center;
-  background: transparent;
-  overflow: hidden;
-  z-index: 1;
-}
-
 #blog-container {
   margin-top: 30px;
-  font-size: 0.9rem;
-  line-height: 1.8rem;
+  font-size: 0.9375rem;
+  line-height: 1.65rem;
   align-items: center;
   max-width: 80vw;
   width: 500px;
@@ -213,9 +236,9 @@ a {
 }
 
 .topic-btn {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.95rem;
   padding: 5px;
   background-color: transparent;
   border: none;
@@ -227,13 +250,13 @@ a {
 
 .topic-btn:hover {
   filter: blur(0px);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .topic-btn-active {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding: 5px;
   background-color: transparent;
   border: none;
@@ -257,8 +280,8 @@ a {
   background: none;
   border: #636363 solid 1px;
   color: white;
-  font-size: 0.8rem;
-  font-family: "Roboto Mono", monospace;
+  font-size: 0.875rem;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   text-align: center;
   justify-content: center;
   padding-right: 5px;
@@ -303,28 +326,37 @@ a {
 
 .title {
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 .x-tbd {
   width: 25vw;
   max-width: 10px;
-  animation: blurAnimation 2s infinite, shakeAnimation 0.2s infinite;
+}
+
+.project-tbd-wrapper {
+  position: fixed;
+  top: 30%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
 #project-tbd {
   align-items: center;
-  font-family: 'Courier New', monospace;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   display: flex;
-  font-size: 2rem;
+  justify-content: center;
+  font-size: 1.75rem;
   text-align: center;
   overflow: hidden;
-  position: fixed;
-  top: 30%;
   gap: 10px;
-  animation: blurAnimation 2s infinite, shakeAnimation 0.2s infinite;
 }
 
 #project-tbd:hover {
-    animation: blurAnimation 2s infinite, scaleAnimation 1s infinite;
+  animation: scaleAnimation 1s infinite;
 }
