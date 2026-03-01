@@ -52,10 +52,6 @@ function renderArchive(filteredTag = null) {
             <h2 class="blog-title" style="cursor:pointer;">${blog.title}</h2>
             <div class="blog-content" style="display:none;">
               <p>${blog.content}</p>
-              <p>#${blog.tags}</p>
-              <div id="copy-btn-container">
-                <button class="copy-btn" onclick="copyLink('${blog.id}')">Copy link</button>
-              </div>
             </div>
           </div>
           <hr class="divider">
@@ -104,14 +100,3 @@ function addCollapseListeners() {
   });
 }
 
-function copyLink(blogId) {
-  const url = `${window.location.origin}${window.location.pathname}#${blogId}`;
-  navigator.clipboard.writeText(url).then(() => {
-    const alert = document.getElementById("copy-notification");
-    if (alert) alert.classList.add("show");
-
-    setTimeout(() => {
-      if (alert) alert.classList.remove("show");
-    }, 2000);
-  });
-}

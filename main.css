@@ -315,54 +315,6 @@ a {
   max-width: 500px;
 }
 
-.copy-btn {
-  background: none;
-  border: #636363 solid 1px;
-  color: white;
-  font-size: 0.875rem;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  text-align: center;
-  justify-content: center;
-  padding-right: 5px;
-  padding-left: 5px;
-  height: 30px;
-  filter: blur(1px);
-}
-
-.copy-btn:hover {
-  background-color: white;
-  border: #636363 solid 1px;
-  color: black;
-  filter: blur(0px);
-}
-
-#copy-btn-container {
-  margin-top: 20px;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.copy-alert {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-  color: black;
-  padding: 10px 16px;
-  border-radius: 3px;
-  font-size: 1rem;
-  z-index: 100;
-  opacity: 0;
-  filter: blur(1px);
-}
-
-.copy-alert.show {
-  display: block;
-  opacity: 0.8;
-}
-
 .title {
   font-weight: 700;
   font-size: 1.125rem;
