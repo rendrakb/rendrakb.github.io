@@ -49,17 +49,17 @@
   width: 10000px;
   height: 100%;
   background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
-  background-size: 1000px 1000px;
+  background-size: 500px 500px;
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
   z-index: 2;
-  -moz-animation: move-background 70s linear infinite;
-  -ms-animation: move-background 70s linear infinite;
-  -o-animation: move-background 70s linear infinite;
-  -webkit-animation: move-background 70s linear infinite;
-  animation: move-background 70s linear infinite;
+  -moz-animation: move-background 50s linear infinite;
+  -ms-animation: move-background 50s linear infinite;
+  -o-animation: move-background 50s linear infinite;
+  -webkit-animation: move-background 50s linear infinite;
+  animation: move-background 50s linear infinite;
 }
 
 .clouds {
@@ -73,11 +73,11 @@
   bottom: 0;
   z-index: 3;
   opacity: 0.25;
-  -moz-animation: move-background 150s linear infinite;
-  -ms-animation: move-background 150s linear infinite;
-  -o-animation: move-background 150s linear infinite;
-  -webkit-animation: move-background 150s linear infinite;
-  animation: move-background 150s linear infinite;
+  -moz-animation: move-background 100s linear infinite;
+  -ms-animation: move-background 100s linear infinite;
+  -o-animation: move-background 100s linear infinite;
+  -webkit-animation: move-background 100s linear infinite;
+  animation: move-background 100s linear infinite;
 }
 
 body {
@@ -103,7 +103,7 @@ a {
 }
 
 .footer {
-  font-size: 0.75rem;
+  font-size: 0.5rem;
   position: fixed;
   bottom: 0px;
   left: 50%;
@@ -132,6 +132,7 @@ a {
   max-width: 20px;
   bottom: 40%;
   left: 1%;
+  animation: blurAnimation 2s infinite;
 }
 
 #header-right {
@@ -140,14 +141,52 @@ a {
   max-width: 20px;
   bottom: 40%;
   right: 1%;
+  animation: blurAnimation 2s infinite;
 }
 
 #header-left:hover {
-  animation: scaleAnimation 0.25s infinite;
+  animation: blurAnimation 2s infinite, scaleAnimation 0.25s infinite;
 }
 
 #header-right:hover {
-  animation: scaleAnimation 0.25s infinite;
+  animation: blurAnimation 2s infinite, scaleAnimation 0.25s infinite;
+}
+
+@keyframes blurAnimation {
+  0% {
+    filter: blur(0px);
+    text-shadow: 0 0 5px white;
+  }
+  25% {
+    filter: blur(4px);
+    text-shadow: 0 0 1px black;
+  }
+  50% {
+    filter: blur(0px);
+    text-shadow: 0 0 5px white;
+  }
+  75% {
+    filter: blur(0px);
+    text-shadow: 0 0 5px white;
+  }
+}
+
+@keyframes shakeAnimation {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(1px, -1px);
+  }
+  50% {
+    transform: translate(-1px, 1px);
+  }
+  75% {
+    transform: translate(1px, 1px);
+  }
+  100% {
+    transform: translate(-1px, -1px);
+  }
 }
 
 @keyframes scaleAnimation {
@@ -329,34 +368,18 @@ a {
   font-size: 1.125rem;
 }
 
-.x-tbd {
-  width: 25vw;
-  max-width: 10px;
-}
-
-.project-tbd-wrapper {
-  position: fixed;
-  top: 30%;
-  left: 0;
-  right: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-
 #project-tbd {
   align-items: center;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   display: flex;
-  justify-content: center;
-  font-size: 1.75rem;
+  font-size: 1rem;
   text-align: center;
   overflow: hidden;
-  gap: 10px;
+  position: fixed;
+  top: 45%;
+  animation: blurAnimation 2s infinite;
 }
 
 #project-tbd:hover {
-  animation: scaleAnimation 1s infinite;
+    animation: blurAnimation 2s infinite, scaleAnimation 1s infinite;
 }
